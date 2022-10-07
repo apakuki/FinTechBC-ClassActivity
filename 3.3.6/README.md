@@ -1,33 +1,31 @@
-# Group Dynamics
+# Indexing Fever
 
-The cryptocurrency market has experienced yet another wave of activity. Everyone's talking about Bitcoin and Ethereum. Close friends and family are bombarding you with questions, requests for information, and investing advice. However, it's been two years since you last looked at your holdings on Binance, and your knowledge of current-day crypto trends is lacking.
+You've caught the multi-indexing fever! Add power to your financial analytic pipelines by indexing your data by month and year with a DatetimeIndex.
 
-It's time you brushed up on the price dynamics of each crypto. Conduct a price analysis for Bitcoin, Ethereum, Bitcoin Cash, Ripple, and Litecoin to assess average, high, and low prices for each cryptocurrency. Determine whether or not crypto performance in the past two years warrants future investment.
+For this demo, you will use historical stock data from [Bombardier (BBD.B)](https://web.tmxmoney.com/quote.php?qm_symbol=BBD.B) that comprises `BBD.B` ticker prices from March to May 2019.
 
 ## Instructions
 
-Using the [starter file](Unsolved/group_dynamics.ipynb) and the historical stock [data](Resources/crypto_data.csv), complete the following steps:
+Use the starter file to complete the following steps:
 
-1. Load CSV data into Pandas using `read_csv`.
+1. Use `read_csv` to load the CSV data into a Pandas DataFrame called `bbd_df`.
 
-2. Assign the index as series `data_date`. Be sure to provide the `parse_dates` and `infer_datetime_format` arguments.
+2. In the `read_csv` function, set the index to equal the `Date` series. Enable the  `parse_dates` and `infer_datetime_format` parameters.
 
-3. Clean missing values. Drop columns `data_time` and `timestamp`.
+3. Assess and clean the data.
 
-4. Plot grouped data on the same chart and return `data_priceUsd`.
+4. Group data by DatetimeIndex year and month.
 
-5. Calculate `average` price across two years for each `cryptocurrency`.
+5. Select close price for `BBD.B` for May 2019 by passing in values for `year` and `month` indices.
 
-6. Calculate `max` price across two years for each `cryptocurrency`.
+### Challenge
 
-7. Calculate `min` price across two years for each `cryptocurrency`.
+Take this activity to the next level by calculating the mean close price for `BBD.B` for all of `2019`.
 
-8. Answer the following questions:
+### Hints
 
-    * Which coin would you recommend investing in?
-
-    * Which coin had the largest swing in prices?
+* Additional information about `DatetimeIndex` capabilities can be found [here](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DatetimeIndex.html).
 
 ---
 
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
