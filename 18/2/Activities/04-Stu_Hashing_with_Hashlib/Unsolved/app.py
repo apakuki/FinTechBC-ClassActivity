@@ -29,25 +29,28 @@ import streamlit as st
 # @TODO:
 # Define a function called `hash_data` that takes in a parameter called `data`
 # YOUR CODE HERE!
+def hash_data(my_data):
+#    sha = hashlib.sha256()
 
 # @TODO:
 # Instantiate an instance of hashlib's `sha256` function
-sha =  # YOUR CODE HERE!
+    sha =  hashlib.sha256()
 
 # @TODO:
 # Use the `encode` function to encode the string version of the data that
 # was passed in as a parameter to the function
-encoded_data =  # YOUR CODE HERE!
+    encoded_data =  my_data.encode()
 
 # @TODO:
 # Call the hashing instance and the `update` function. Pass it the encoded
 # data as a parameter
 # YOUR CODE HERE!
+    sha.update(encoded_data)
 
 # @TODO:
 # Return the unique hash of the data using the `hexdigest` function
 # YOUR CODE HERE!
-
+    return(sha.hexdigest())
 ################################################################################
 # Streamlit Code
 
@@ -63,12 +66,14 @@ st.markdown("# Create a Unique Hash of Data")
 # Add a Streamlit `text_area` component to accept data from the user
 # Be sure to convert the input data to a string
 # Use the `encode` function to encode the input data
-input_data =  # YOUR CODE HERE!
+input_data =  st.text_area().encode()
 
 # @TODO:
 # Use the Streamlit `write` function to display the length (`len`) of the input
 # data back to the user
 # YOUR CODE HERE!
+
+st.write(input_data).len()
 
 ################################################################################
 # Step 3:
@@ -79,18 +84,24 @@ input_data =  # YOUR CODE HERE!
 # @TODO:
 # Add a Streamlit `button` named “Hash Text”
 # YOUR CODE HERE!
+if st.button("Hash Text"):
+    
+   
 
 # @TODO:
 # Generate a hash of the user input using the `hash_data` function
-input_hash =  # YOUR CODE HERE!
+    input_hash =  hash_data(input_data)
 
 # @TODO:
 # Use the Streamlit `write` function to display the unique hash of the data
 # YOUR CODE HERE!
+    st.write(input_hash)
 
 # @TODO:
 # Use the Streamlit `write` function to display the length of the output hash.
 # YOUR CODE HERE!
+    st.write(len(input_hash))
+    
 ################################################################################
 # Step 4:
 # Test the application.
