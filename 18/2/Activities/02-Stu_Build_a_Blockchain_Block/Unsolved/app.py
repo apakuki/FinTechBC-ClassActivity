@@ -38,19 +38,26 @@ from typing import Any
 # YOUR CODE HERE!
 # YOUR CODE HERE!
 
+@dataclass
+
+class Block:
+
     # @TODO:
     # Define an attribute named `data` with a type of `Any`.
     # YOUR CODE HERE!
+    data: Any
 
     # @TODO:
     # Define an attribute named `creator_id` with a type of `int`.
     # YOUR CODE HERE!
+    creator_id: int
 
     # @TODO:
     # Define an attribute name `timestamp` with a type of `str`.
     # Use the following code to set the value:
     # `datetime.utcnow().strftime("%H:%M:%S")`
     # # YOUR CODE HERE!
+    timestamp: str = datetime.utcnow().strftime("%H:%M:%S")
 
 # Create the application headers using markdown strings.
 st.markdown("# PyBlock")
@@ -63,7 +70,7 @@ st.markdown("## Store Data in a Block")
 # @TODO:
 # Referencing the Streamlit library, use the `text_input` function and pass the
 # parameter "Block Data".
-input_data =  # YOUR CODE HERE!
+input_data =  st.text_input("Block Data")
 
 ################################################################################
 # Step 3:
@@ -88,11 +95,13 @@ input_data =  # YOUR CODE HERE!
     # Create an instance of the `Block` data class called `new_block`
     # Use the user input from Step 2 for the `data` attribute
     # Use the integer 42 for the `creator_id`
-    new_block =  # YOUR CODE HERE!
+new_block =  Block(data=input_data, creator_id=42)
 
     # @TODO:
     # Use the `st.write` function to display the new block.
     # YOUR CODE HERE!
+if st.button("Display Message"):
+    st.write(new_block)
 
 ################################################################################
 # Step 4:
