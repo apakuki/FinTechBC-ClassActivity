@@ -3,6 +3,7 @@
 # Imports
 import streamlit as st
 from web3 import Web3
+from ethereum import get_balance    
 
 w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
 
@@ -41,7 +42,9 @@ st.markdown("## Ethereum Account Balance:")
 
 # @TODO
 # Call the `get_balance` function and write the account balance to the screen
+ether_balance = get_balance(account.address)
 
+st.write(ether_balance)
 
 #######################################
 

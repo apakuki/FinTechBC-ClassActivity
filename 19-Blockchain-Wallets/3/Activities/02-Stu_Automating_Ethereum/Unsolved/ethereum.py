@@ -37,12 +37,18 @@ def generate_account():
 
 
 # @TODO
-# Create a function called `get_balance`, it should convert the wei balance of the account to ether, and returns the value of ether
+# Create a function called `get_balance`, it should convert the wei balance of the account to 
+# ether, and returns the value of ether
 
-
+def generate_account(address):
+    wei_balance = w3.eth.get_balance(address)
+    ether = w3.fromWei(wei_balance)
+    return ether
 
 
 
 
 # @TODO
 # Create a function called `send_transaction` that creates a raw transaction, signs it, and sends it. Return the confirmation hash from the transaction.
+
+#def send_transaction():
