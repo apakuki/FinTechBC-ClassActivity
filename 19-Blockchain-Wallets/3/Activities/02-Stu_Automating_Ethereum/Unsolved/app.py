@@ -3,13 +3,14 @@
 # Imports
 import streamlit as st
 from web3 import Web3
-from ethereum import get_balance    
 
 w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
 
 # @TODO
 # Update the imports for the functions coming from ethereum.py
 from ethereum import generate_account
+from ethereum import get_balance    
+from ethereum import send_transaction
 
 
 ################################################################################
