@@ -37,12 +37,38 @@ def generate_account():
 
 
 # @TODO
-# Create a function called `get_balance`, it should convert the wei balance of the account to ether, and returns the value of ether
+# Create a function called `get_balance`, it should convert the wei balance of the account to 
+# ether, and returns the value of ether
 
-
+def get_balance(address):
+    wei_balance = w3.eth.get_balance(address)
+    ether = w3.fromWei(wei_balance, 'ether')
+    return ether
 
 
 
 
 # @TODO
 # Create a function called `send_transaction` that creates a raw transaction, signs it, and sends it. Return the confirmation hash from the transaction.
+
+def send_transaction(account, receiver, ether):
+    w3.eth.setGasPriceStrategy(medium_gas_price_strategy)
+
+    wei_value = w3.teWei(ether)
+
+    gas_estimate = w3.eth.estimateGas({ "to": receiver, "from": account.address, "value" : wei_value})
+
+    raw_tx = {  "to": receiver,
+                "from": account,
+                "value": wei_value,
+                "gas" : gas_estimate,
+                "gasprice" : w3.eth.generateGasPrice(wei_value), 
+                "nonce" : w3.eth.getTransactionCount(account.address)
+            }
+    
+    signed_tx = account.signTransaction(raw_tx)
+
+    return(w3.eth.sendRawTransaction(signed_tx.rawTransaction))
+
+    
+    
