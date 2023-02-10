@@ -14,7 +14,6 @@ from typing import Any, List
 
 # @TODO: # From crypto_wallet.py import w3, generate_account, get_balance
 
-from crypto_wallet import w3, generate_account, get_balance
 
 ################################################################################
 # Cat Information
@@ -36,9 +35,9 @@ def get_cats():
     """Display the database of cats to purchase information."""
     db_list = list(cat_database.values())
 # Create a for loop through the cat_database use `db_list to produce the results`
-    #for number in range(len(kitties)):
+    for number in range(len(kitties)):
   # @TODO Use `st.write` to add the objects from the object to the code (hint price and name)
-        #st.write('Name', number[0], 'Price', number[1])
+
 ################################################################################
 # Streamlit Code
 
@@ -49,9 +48,9 @@ def get_cats():
 # @TODO: Call the `get_balance` function and save it as the variable `ether`
 
 # Disply the balance of ether in the account
-#st.sidebar.markdown("## Your Balance of Ether")
-#st.sidebar.markdown(ether)
-#st.sidebar.markdown("---------")
+st.sidebar.markdown("## Your Balance of Ether")
+st.sidebar.markdown(ether)
+st.sidebar.markdown("---------")
 
 
 # @TODO: Create a select box to chose a Cat using `st.sidebar.selectbox`
@@ -60,15 +59,15 @@ def get_cats():
 # @TODO: Create a header using ` st.sidebar.markdown()` to display cat name and price.
 
 # Identify the cat for purchase by name
-#cat = cat_database[cat][0]
+cat = cat_database[cat][0]
 
 #@TODO: Create a variable called cat_price to retrive the cat price
 
 #@TODO: create an if else statement to check if the selected cat can be purchased
 
 # Write the cats name to the sidebar
-#st.sidebar.write("If you buy", cat, "for", cat_price, "eth, your account balance will be", new_balance, ".")
-#  get_cats()
-#else:
-#  st.sidebar.write("With a balance of", ether, "ether, you can't buy", cat, "for", cat_price, "eth." )
-#  get_cats()
+  st.sidebar.write("If you buy", cat, "for", cat_price, "eth, your account balance will be", new_balance, ".")
+  get_cats()
+else:
+  st.sidebar.write("With a balance of", ether, "ether, you can't buy", cat, "for", cat_price, "eth." )
+  get_cats()

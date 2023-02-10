@@ -9,8 +9,6 @@ w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
 # @TODO
 # Update the imports for the functions coming from ethereum.py
 from ethereum import generate_account
-from ethereum import get_balance    
-from ethereum import send_transaction
 
 
 ################################################################################
@@ -43,9 +41,7 @@ st.markdown("## Ethereum Account Balance:")
 
 # @TODO
 # Call the `get_balance` function and write the account balance to the screen
-ether_balance = get_balance(account.address)
 
-st.write(ether_balance)
 
 #######################################
 
