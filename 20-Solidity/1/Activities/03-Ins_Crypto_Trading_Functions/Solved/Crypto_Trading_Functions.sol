@@ -18,7 +18,7 @@ and an identifier as a `bool` for boolean to ensure it is a buy order call it `i
 
 4. Add  a `function` named `updateTrade`. This function will update the trading price of our last buy or sell operation.
 
-/*
+*/
 
 pragma solidity ^0.5.0;
 

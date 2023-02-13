@@ -34,7 +34,7 @@ Instructions
 pragma solidity ^0.5.0;
 
 contract CustomerAccount {
-    address owner = 0xc3879B456DAA348a16B6524CBC558d2CC984722c;
+    address owner = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
     bool isNewAccount = true;
     uint accountBalance = 10000;
     string customerName = "Jordan";
