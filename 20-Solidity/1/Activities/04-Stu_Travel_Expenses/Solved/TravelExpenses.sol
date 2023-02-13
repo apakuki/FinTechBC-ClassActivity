@@ -13,10 +13,10 @@ As in single-line comments, any code contained within multi-line comments is not
 
 contract TravelExpenses {
   // 1. Create a public payable address variable named `corporate_account` and assign a valid Ethereum address to it.
-  address payable public corporate_account = 0x77B2aD074a1aF1AF2a408E3D48465E5F9ec75f45;
+  address payable public corporate_account = 0x02225fBB07e3f5003017063b1aF8Fdf00580787B;
 
   // 2. Create payable address variable named `personal_account` and assign a valid Ethereum address to it
-  address payable personal_account = 0x873Ad450656C46cb564eaf418472A1c77d7327Ad;
+  address payable personal_account = 0xb5249209b759d3DF85bA3cD896122A148348091b;
 
   // 3. Define and assign a string variable named "employee_name` that has your name.
   string employee_name = "John Doe";
