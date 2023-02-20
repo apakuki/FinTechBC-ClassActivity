@@ -585,7 +585,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Documents/FinTechBC-ClassActivity/22-dApps/3/Activities/02-Evr_Certificate_dApp/Solved/contracts/certificate.sol": "Certificate"
+			"22-dApps/3/Activities/02-Evr_Certificate_dApp/Solved/contracts/certificate.sol": "Certificate"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -596,7 +596,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"Documents/FinTechBC-ClassActivity/22-dApps/3/Activities/02-Evr_Certificate_dApp/Solved/contracts/certificate.sol": {
+		"22-dApps/3/Activities/02-Evr_Certificate_dApp/Solved/contracts/certificate.sol": {
 			"keccak256": "0xa4301e3f9bef11be1be3156aa663d8c420b8b0646bdabaaa121a9dba2e39b5b4",
 			"urls": [
 				"bzz-raw://10acf0bb29b1a75e69a39f6b17471ee9a97eadafe2cfccc402746346ec22222b",
